@@ -1,0 +1,91 @@
+﻿<Window x:Class="AukcijskaProdaja.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AukcijskaProdaja"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="620" WindowStartupLocation="CenterScreen"  
+        Background="Transparent">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <!--Pozadina-->
+        <Image Source="./Resources/Sunset1.jpg" Stretch="UniformToFill" Grid.RowSpan="2" Grid.ColumnSpan="2" Opacity="0.7" Margin="0,0,0,0"/>
+
+        <!--Title-->
+        <Label Content="Login" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Arial" Foreground="White" 
+               FontWeight="Bold" FontSize="32"></Label>
+
+        <!--kreiranje Username i password-->
+        <StackPanel Grid.Row="1">
+
+            <!--Username-->
+            <Label Content="User Name" Margin="57, 0" FontSize="15" FontFamily="Segoe UI Historic" Width="250" Foreground="White"/>
+            <TextBox x:Name="txtUsername" FontFamily="Segoe UI Historic" Background="Transparent" FontWeight="Light" FontSize="22" HorizontalAlignment="Center"
+                     BorderThickness="0" Width="250" HorizontalContentAlignment="Left" Opacity="0.8" Foreground="White"/>
+            <Border Width="250" Height="2" Background="White" Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <!--Password-->
+            <Label Content="Password" Margin="57, 40,57,0" FontSize="15" FontFamily="Segoe UI Historic" Width="250" Foreground="White"/>
+            <PasswordBox x:Name="txtpassword" FontFamily="Segoe UI Historic" Background="Transparent" FontWeight="Light" FontSize="22" HorizontalAlignment="Center"
+                     BorderThickness="0" Width="250" HorizontalContentAlignment="Left" Opacity="0.8" Foreground="White"/>
+            <Border Width="250" Height="2" Background="White" Opacity="0.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <!--Login i SingIn-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="loginBtn" Command="{Binding Path=LoginCommand}" Style="{StaticResource ButtonStyle1}" Content="Login" Width="100" Height="30"  Margin="30,40,30,40" FontSize="14" Click="loginBtn_Click"/>
+                <Button x:Name="SignInBtn" Style="{StaticResource ButtonStyle1}" Content="Sing In" Width="100" Height="30" Margin="30,40,30,40" FontSize="14" Click="SignInBtn_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!--Animacija-->
+        <Label Content="Aukcijska &#xA;  prodaja" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White"
+               FontSize="30" FontFamily="Candara Light" Margin="0,0,0,18">
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Grid.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:5"></DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label Content="Pravila aukcije:"  Foreground="White"
+               FontSize="16" FontFamily="Candara Light" Height="25" >
+                <Label.Triggers>
+                    <EventTrigger RoutedEvent="Grid.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:7"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Label.Triggers>
+            </Label>
+            <Label Content="-Svaka aukcija ima trajanje od dva minuta &#xA;-Sve dok korisnici postavljaju ponude,&#xA; vreme aukcije se vraća na početak 
+                   &#xA;-Vrednost proizvoda za koji je ponuda&#xA; postavljena povećava se za jedan evro 
+                   &#xA;-Kada istekne vreme aukcije, korisnik koji &#xA; je postavio poslednju ponudu označava &#xA; se kao pobednik i aukcija se zatvara" Foreground="White"
+               FontSize="14" FontFamily="Candara Light" >
+                <Label.Triggers>
+                    <EventTrigger RoutedEvent="Grid.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:10"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Label.Triggers>
+            </Label>
+        
+        </StackPanel>
+        <Label Grid.Row="2" Content="By Veljko Stankovic" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="White"
+               FontSize="10" FontFamily="Candara Light" ></Label>
+    </Grid>
+</Window>

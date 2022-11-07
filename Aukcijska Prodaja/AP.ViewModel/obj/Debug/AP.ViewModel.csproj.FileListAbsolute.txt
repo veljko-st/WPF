@@ -1,0 +1,9 @@
+E:\IT Akademy\WPF\AP.ViewModel\bin\Debug\AP.ViewModel.dll
+E:\IT Akademy\WPF\AP.ViewModel\bin\Debug\AP.ViewModel.pdb
+E:\IT Akademy\WPF\AP.ViewModel\obj\Debug\AP.ViewModel.csproj.AssemblyReference.cache
+E:\IT Akademy\WPF\AP.ViewModel\obj\Debug\AP.ViewModel.csproj.CoreCompileInputs.cache
+E:\IT Akademy\WPF\AP.ViewModel\obj\Debug\AP.ViewModel.dll
+E:\IT Akademy\WPF\AP.ViewModel\obj\Debug\AP.ViewModel.pdb
+E:\IT Akademy\WPF\AP.ViewModel\bin\Debug\AP.Model.dll
+E:\IT Akademy\WPF\AP.ViewModel\bin\Debug\AP.Model.pdb
+E:\IT Akademy\WPF\AP.ViewModel\obj\Debug\AP.ViewModel.csproj.CopyComplete
